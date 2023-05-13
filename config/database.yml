@@ -49,6 +49,5 @@ test:
 #
 production:
   <<: *default
-  database: suprethm_production
-  username: suprethm
+  adapter: postgresql
   password: <%= ENV['SUPRETHM_DATABASE_PASSWORD'] %>
