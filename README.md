@@ -36,7 +36,7 @@ https://docs.google.com/spreadsheets/d/1wWSPzAi8jL6AbnsSDx2y3acPzdP24szg2x-Hz85L
 レスポンシブデザインへの対応
 
 # データベース設計
-作成中です
+https://gyazo.com/8615959b7e19b38151f88bd56fd4fa04
 # 画面遷移図
 https://gyazo.com/519fe6481498598035434a065c17c822
 # 開発環境
