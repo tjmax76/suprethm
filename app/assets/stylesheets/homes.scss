@@ -1,3 +1,53 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-contents {
+  text-align: center;
+}
+
+.top-contents h1 {
+  font-size: 6vh;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+
+.top-contents p {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.our-features {
+  margin-top:  40px;
+  padding-left: 10px;
+}
+
+.feature {
+  font-size: 22px;
+  line-height: 5vh;
+  border-bottom: 1px solid;
+  width: 50%;
+  height: 5vh;
+}
+
+.first-step {
+  width: 63%;
+  margin-top: 20px;
+}
+
+.first-step em{
+  font-size: 20px;
+  color: blue;
+}
+
+.first-contents p {
+  margin-top: 7px;
+}
+
+.first-contents {
+  margin-top: 13px;
+}
+
+.first-step {
+  background-color: lightgoldenrodyellow;
+}
+
+.tainai-dokei {
+  margin-left: 20%;
+}
