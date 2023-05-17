@@ -1,25 +1,33 @@
 <%= render partial: "shared/header"%>
 
 <div class="top-contents">
-  <h1>あなたの最適な生活リズムを見つけましょう</h1>
+  <em>あなたの最適な生活リズムを見つけましょう</em>
   <p>SupreThm(シュプリズム)はあなたが最高のパフォーマンスを発揮するための生活リズムを提案します<br>
   あなたが最も輝ける生活リズムを発見しましょう！</p>
 </div>
 
 <div class="our-features">
   <h1 class="feature">最適なリズムをつくる3ステップ</h1>
-  <div class="first-step">
+  <div class="first step">
     <em>クロノタイプ診断</em>
     <%= image_tag "/images/body_tainai_dokei1.png", size: '100x200', class: "tainai-dokei"%>
-    <div class="first-contents">
+    <div class="feature-contents">
       <p>人間は遺伝的に体内時計のパターンが決まっています。</p>
-      <p>夜の方が活発になる人もいれば、日中が最も元気な人もいます。</p>
-      <p>このパターンを4つに分類したものはクロノタイプと呼ばれます。</p>
-      <p>アメリカの睡眠学者によって提唱されたものです。</p>
+      <p>夜に活発になる人もいれば、日中が一番元気！という人もいます。</p>
+      <p>このパターンを4つに分類したものをクロノタイプと呼びます。</p>
+      <p>クロノタイプはアメリカの睡眠学者によって提唱されたものです。</p>
       <p>まずはあなたのクロノタイプを診断し、あなたに最適な睡眠時間や起床のタイミングなどを把握しましょう。</p>
     </div>
+  <%= link_to "クロノタイプ診断へ", "#", class: "diagnosis-btn" %>
   </div>
 
-  
-
-
+  <div class="second step">
+    <em>スケジュール作成</em>
+    <%= image_tag "/images/スケジュール帳.png", size: '230x115', class: "schedule-img" %>
+    <div class="feature-contents">
+      <p>診断されたクロノタイプを参考にあなたの一日のスケジュールを決めましょう。</p>
+      <p>スケジュールはゆとりを持たせて設定すると守りやすくなります。</p>
+      <p>自分の負担にならない程度に守るのが長く続けるコツです。</p>
+      <p style=" font-weight : bold;">※※スケジュールの作成には会員登録が必要です！※※</p>
+    </div>
+  </div>

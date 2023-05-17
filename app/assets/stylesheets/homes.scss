@@ -2,10 +2,12 @@
   text-align: center;
 }
 
-.top-contents h1 {
+.top-contents em {
   font-size: 6vh;
   margin-top: 15px;
+  display: block;
   opacity: 0.7;
+  font-weight: bold;
 }
 
 .top-contents p {
@@ -26,28 +28,48 @@
   height: 5vh;
 }
 
-.first-step {
+.step {
   width: 63%;
   margin-top: 20px;
+  background-color: lightgoldenrodyellow;
+  padding-bottom: 20px;
 }
 
-.first-step em{
+.step em{
   font-size: 20px;
   color: blue;
 }
 
-.first-contents p {
+.feature-contents p {
   margin-top: 7px;
 }
 
-.first-contents {
+.feature-contents {
   margin-top: 13px;
 }
 
-.first-step {
-  background-color: lightgoldenrodyellow;
+.tainai-dokei {
+  margin-left: 25%;
 }
 
-.tainai-dokei {
-  margin-left: 20%;
+.diagnosis-btn {
+  font-weight: bold;
+  color: white;
+  background-color: orange;
+  font-size: 25px;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  margin-top: 20px;
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.second {
+  margin: 80px 0;
+}
+
+.schedule-img {
+  margin-left: 18%;
 }
