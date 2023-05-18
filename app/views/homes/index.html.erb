@@ -23,11 +23,36 @@
 
   <div class="second step">
     <em>スケジュール作成</em>
-    <%= image_tag "/images/スケジュール帳.png", size: '230x115', class: "schedule-img" %>
+    <%= image_tag "/images/スケジュール帳.png", size: '190x115', class: "schedule-img" %>
     <div class="feature-contents">
       <p>診断されたクロノタイプを参考にあなたの一日のスケジュールを決めましょう。</p>
       <p>スケジュールはゆとりを持たせて設定すると守りやすくなります。</p>
       <p>自分の負担にならない程度に守るのが長く続けるコツです。</p>
-      <p style=" font-weight : bold;">※※スケジュールの作成には会員登録が必要です！※※</p>
+      <p style="font-weight: bold;">※※スケジュールの作成には会員登録が必要です！※※</p>
     </div>
   </div>
+
+  <div class="third step">
+    <em>一行日記</em>
+    <%= image_tag "/images/diary.png", size: '150x150', class: "diary-img" %>
+    <div class="feature-contents">
+      <p>一日を振り返るための日記をつけましょう。</p>
+      <p>日記には</p><br>
+      <p>・その日にあった最も嫌なこと</p>
+      <p>・最も良かったこと</p>
+      <p>・明日の目標</p><br>
+      <p>を<span style="color: red;">上記の順番で</span>書きましょう。</p>
+      <p>これによって一日の嫌なことを手放し、幸せな気持ちになってから最後に明日へ意識を向けて一日を終えることができます。</p>
+      <p style="font-weight: bold;">※※日記機能の利用には会員登録が必要です！※※</p>
+    </div>
+  </div>
+</div>
+
+<div class="top-bottom">
+  <p>さあ、あなたの快適な生活をスタートさせましょう！</p>
+    <div class="btn-container">
+      <%= link_to "今スグ会員登録!", "#", class: "sign-up btn", style: "color: white;" %>
+      <span>or</span>
+      <%= link_to "ログイン", "#", class: "sign-in btn", style: "color: white;" %>
+    </div>
+</div>
