@@ -1,0 +1,49 @@
+<%= render partial: "shared/header", locals: {user: @user} %>
+<div class="welcome">
+  <%= "おかえりなさい、#{@user.nickname}さん" %>
+</div>
+
+<div class="your-animal">
+  <%= image_tag "/images/bear.png", size: '200x200', class: "chrono-img"%>
+  <p>あなたは<span class="animal">クマ</span>タイプです</p>
+
+
+<div class="contents-box">
+  <div class="schedules">
+    <h1>スケジュール</h1>
+    <div class="schedule-contents">
+      <div class="preview-schedule">
+        <%= link_to "#" do %>
+          <p>スケジュールを見る</p>
+          <%= image_tag "/images/pie_graph.png", size: '230x230'%>
+        <% end %>
+      </div>
+
+      <div class="edit-schedule">
+        <%= link_to "#" do %>
+          <p>スケジュールを作る</p>
+          <%= image_tag "/images/スケジュール帳.png", size: '230x195'%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="diaries">
+    <h1>日記</h1>
+    <div class="diary-contents">
+      <div class="preview-diary">
+        <%= link_to "#" do %>
+          <p>日記を見る</p>
+          <%= image_tag "/images/diary.png", size: '230x230'%>
+        <% end %>
+      </div>
+
+      <div class="edit-diary">
+        <%= link_to "#" do %>
+          <p>日記を書く</p>
+          <%= image_tag "/images/writing.png", size: '145x230'%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
