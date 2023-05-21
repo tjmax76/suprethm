@@ -1,0 +1,2 @@
+class ChronosController < ApplicationController
+end
