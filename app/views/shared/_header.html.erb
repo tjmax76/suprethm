@@ -4,8 +4,13 @@
       <%= link_to "SupreThm", root_path, class: "header_title"%>
     </div>
     <div class="users">
-      <%= link_to "新規登録", "#", class: "head-sign-up"%>
-      <%= link_to "ログイン", "#", class: "head-sign-in"%>
+      <% if user_signed_in? %>
+        <%= link_to "#{user.nickname}", user_path(user), class: "head-menu-left"%>
+        <%= link_to "ログアウト", destroy_user_session_path, method: "delete", class: "head-menu-right" %>
+      <% else %>
+        <%= link_to "新規登録", new_user_registration_path, class: "head-menu-left"%>
+        <%= link_to "ログイン", new_user_session_path, class: "head-menu-right"%>
+      <% end %>
     </div>
   </div>
 </header>
