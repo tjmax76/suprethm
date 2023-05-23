@@ -1,0 +1,16 @@
+<div class="diagnosis-head">
+  <h1>2分でわかる！あなたのクロノタイプ</h1>
+  <p>これからあなたのクロノタイプを調べます。</p>
+  <p>下記の設問に深く考えずなるべく直感で答えてください</p>
+</div>
+
+<%= form_with url: "#", local: true, class: "questions" do |f|%>
+  <div class="question">
+    <%= f.radio_button :q1, :yes %>
+    <%= f.label :q1, "そう思う" %>
+    <%= f.radio_button :q1, :neither %>
+    <%= f.label :q1, "どちらでもない" %>
+    <%= f.radio_button :q1, :no %>
+    <%= f.label :q1, "そう思わない" %>
+  </div>
+<% end %>
