@@ -1,0 +1,39 @@
+.sign-up-title {
+  margin-top: 20px;
+  font-size: 6vh;
+  text-align: center;
+}
+
+.new_user {
+  text-align: center;
+}
+
+.field {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  font-size: 20px;
+}
+
+.field input{
+  width: 40%;
+  height: 30px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.actions input{
+  height: 40px;
+  width: 15%;
+  font-size: 22px;
+  background-color: orange;
+  color: white;
+  border-radius: 8px;
+}
+
+.sign-in-title {
+  margin-top: 20px;
+  font-size: 6vh;
+  text-align: center;
+}
