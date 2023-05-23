@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  extend ActiveHash::Base::Associations::ActiveRecordExtensions
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :chrono_type
-  
+
 end

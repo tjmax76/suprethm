@@ -6,6 +6,6 @@ class ChronoType < ActiveHash::Base
     { id: 4, name: 'イルカ', sleep_hours: '6〜7', go_to_bed: '24:00', wake_up: '6:30', peak: ['10:00〜12:00', '13:00〜14:00'], execise: '7:00〜9:00'}
   ]
 
-  include ActiveHash::Base::Associations
+  include ActiveHash::Associations
   has_many :users
 end
