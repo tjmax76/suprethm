@@ -1,0 +1,47 @@
+.diagnosis-container {
+  background-color: beige;
+}
+
+.diagnosis-head h1{
+  font-size: 7vh;
+  color: blue;
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+
+.diagnosis-head {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.diagnosis-head p{
+  padding: 10px;
+  font-size: 3vh;
+}
+
+.question {
+  text-align: center;
+  height: 10vh;
+  margin-top: 30px;
+}
+
+.question p{
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.submit {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.submit input{
+  border-radius: 8px;
+  background-color: orange;
+  color: white;
+  height: 40px;
+  width: 15%;
+  font-size: 22px;
+}
