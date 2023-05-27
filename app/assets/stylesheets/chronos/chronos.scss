@@ -20,15 +20,16 @@
   font-size: 3vh;
 }
 
-.question {
-  text-align: center;
-  height: 10vh;
-  margin-top: 30px;
-}
-
-.question p{
-  font-weight: bold;
-  margin-bottom: 15px;
+@for $i from 1 through 10 {
+  .question#{$i} {
+    text-align: center;
+    height: 10vh;
+    margin-top: 30px;
+    p {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .submit {

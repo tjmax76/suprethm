@@ -7,7 +7,7 @@
   </div>
 
   <%= form_with url: "#", local: true, class: "questions" do |f|%>
-    <div class="question">
+    <div class="question1">
       <p>Q1. 早起きは得意な方？</p>
       <%= f.radio_button :q1, :yes %>
       <%= f.label :q1, "そう思う" %>
@@ -17,7 +17,7 @@
       <%= f.label :q1, "そう思わない" %>
     </div>
 
-    <div class="question">
+    <div class="question2">
       <p>Q2. 日付が変わる前に寝ることが多い？</p>
       <%= f.radio_button :q2, :yes %>
       <%= f.label :q2, "そう思う" %>
@@ -27,7 +27,7 @@
       <%= f.label :q2, "そう思わない" %>
     </div>
 
-    <div class="question">
+    <div class="question3">
       <p>Q3. 早起きは得意な方？</p>
       <%= f.radio_button :q3, :yes %>
       <%= f.label :q3, "そう思う" %>
@@ -37,7 +37,7 @@
       <%= f.label :q3, "そう思わない" %>
     </div>
 
-    <div class="question">
+    <div class="question4">
       <p>Q4. 一番好きなのは？</p>
       <%= f.radio_button :q4, :yes %>
       <%= f.label :q4, "朝食" %>
@@ -47,7 +47,7 @@
       <%= f.label :q4, "夕食" %>
     </div>
 
-    <div class="question">
+    <div class="question5">
       <p>Q5. 新しいことにチャレンジするのが好きだ</p>
       <%= f.radio_button :q5, :yes %>
       <%= f.label :q5, "そう思う" %>
@@ -57,7 +57,7 @@
       <%= f.label :q5, "そう思わない" %>
     </div>
 
-    <div class="question">
+    <div class="question6">
       <p>Q6. 他人との衝突を避けがちだ</p>
       <%= f.radio_button :q6, :yes %>
       <%= f.label :q6, "そう思う" %>
@@ -67,7 +67,7 @@
       <%= f.label :q6, "そう思わない" %>
     </div>
 
-    <div class="question">
+    <div class="question7">
       <p>Q7. 欲望に忠実な方である</p>
       <%= f.radio_button :q7, :yes %>
       <%= f.label :q7, "そう思う" %>
@@ -77,7 +77,7 @@
       <%= f.label :q7, "そう思わない" %>
     </div>
 
-    <div class="question">
+    <div class="question8">
       <p>Q8. 完璧主義だ</p>
       <%= f.radio_button :q8, :yes %>
       <%= f.label :q8, "そう思う" %>
@@ -87,7 +87,7 @@
       <%= f.label :q8, "そう思わない" %>
     </div>
 
-    <div class="question">
+    <div class="question9">
       <p>Q9. 仕事や勉強は朝が一番捗る</p>
       <%= f.radio_button :q9, :yes %>
       <%= f.label :q9, "そう思う" %>
@@ -97,7 +97,7 @@
       <%= f.label :q9, "そう思わない" %>
     </div>
 
-    <div class="question">
+    <div class="question10">
       <p>Q10. 内向的でインドア派だ</p>
       <%= f.radio_button :q10, :yes %>
       <%= f.label :q10, "そう思う" %>
@@ -108,7 +108,7 @@
     </div>
 
     <div class="submit">
-      <%= f.submit "回答を送信" %>
+      <%= f.submit "回答を送信", id: "submit" %>
     </div>
   <% end %>
 </div>
