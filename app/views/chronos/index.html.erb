@@ -1,114 +1,43 @@
-<%= render partial: 'shared/header' %>
-<div class="diagnosis-container">
-  <div class="diagnosis-head">
-    <h1>2分でわかる！あなたのクロノタイプ</h1>
-    <p>これからあなたのクロノタイプを調べます。</p>
-    <p>下記の設問になるべく深く考えず、直感で答えてください。</p>
-  </div>
+<%= render partial: "shared/header", locals: {user: @user} %>
 
-  <%= form_with url: "#", local: true, class: "questions" do |f|%>
-    <div class="question1">
-      <p>Q1. 早起きは得意な方？</p>
-      <%= f.radio_button :q1, :yes %>
-      <%= f.label :q1, "そう思う" %>
-      <%= f.radio_button :q1, :neither %>
-      <%= f.label :q1, "どちらでもない" %>
-      <%= f.radio_button :q1, :no %>
-      <%= f.label :q1, "そう思わない" %>
-    </div>
-
-    <div class="question2">
-      <p>Q2. 日付が変わる前に寝ることが多い？</p>
-      <%= f.radio_button :q2, :yes %>
-      <%= f.label :q2, "そう思う" %>
-      <%= f.radio_button :q2, :neither %>
-      <%= f.label :q2, "どちらでもない" %>
-      <%= f.radio_button :q2, :no %>
-      <%= f.label :q2, "そう思わない" %>
-    </div>
-
-    <div class="question3">
-      <p>Q3. 早起きは得意な方？</p>
-      <%= f.radio_button :q3, :yes %>
-      <%= f.label :q3, "そう思う" %>
-      <%= f.radio_button :q3, :neither %>
-      <%= f.label :q3, "どちらでもない" %>
-      <%= f.radio_button :q3, :no %>
-      <%= f.label :q3, "そう思わない" %>
-    </div>
-
-    <div class="question4">
-      <p>Q4. 一番好きなのは？</p>
-      <%= f.radio_button :q4, :yes %>
-      <%= f.label :q4, "朝食" %>
-      <%= f.radio_button :q4, :neither %>
-      <%= f.label :q4, "昼食" %>
-      <%= f.radio_button :q4, :no %>
-      <%= f.label :q4, "夕食" %>
-    </div>
-
-    <div class="question5">
-      <p>Q5. 新しいことにチャレンジするのが好きだ</p>
-      <%= f.radio_button :q5, :yes %>
-      <%= f.label :q5, "そう思う" %>
-      <%= f.radio_button :q5, :neither %>
-      <%= f.label :q5, "どちらでもない" %>
-      <%= f.radio_button :q5, :no %>
-      <%= f.label :q5, "そう思わない" %>
-    </div>
-
-    <div class="question6">
-      <p>Q6. 他人との衝突を避けがちだ</p>
-      <%= f.radio_button :q6, :yes %>
-      <%= f.label :q6, "そう思う" %>
-      <%= f.radio_button :q6, :neither %>
-      <%= f.label :q6, "どちらでもない" %>
-      <%= f.radio_button :q6, :no %>
-      <%= f.label :q6, "そう思わない" %>
-    </div>
-
-    <div class="question7">
-      <p>Q7. 欲望に忠実な方である</p>
-      <%= f.radio_button :q7, :yes %>
-      <%= f.label :q7, "そう思う" %>
-      <%= f.radio_button :q7, :neither %>
-      <%= f.label :q7, "どちらでもない" %>
-      <%= f.radio_button :q7, :no %>
-      <%= f.label :q7, "そう思わない" %>
-    </div>
-
-    <div class="question8">
-      <p>Q8. 完璧主義だ</p>
-      <%= f.radio_button :q8, :yes %>
-      <%= f.label :q8, "そう思う" %>
-      <%= f.radio_button :q8, :neither %>
-      <%= f.label :q8, "どちらでもない" %>
-      <%= f.radio_button :q8, :no %>
-      <%= f.label :q8, "そう思わない" %>
-    </div>
-
-    <div class="question9">
-      <p>Q9. 仕事や勉強は朝が一番捗る</p>
-      <%= f.radio_button :q9, :yes %>
-      <%= f.label :q9, "そう思う" %>
-      <%= f.radio_button :q9, :neither %>
-      <%= f.label :q9, "どちらでもない" %>
-      <%= f.radio_button :q9, :no %>
-      <%= f.label :q9, "そう思わない" %>
-    </div>
-
-    <div class="question10">
-      <p>Q10. 内向的でインドア派だ</p>
-      <%= f.radio_button :q10, :yes %>
-      <%= f.label :q10, "そう思う" %>
-      <%= f.radio_button :q10, :neither %>
-      <%= f.label :q10, "どちらでもない" %>
-      <%= f.radio_button :q10, :no %>
-      <%= f.label :q10, "そう思わない" %>
-    </div>
-
-    <div class="submit">
-      <%= f.submit "回答を送信", id: "submit" %>
-    </div>
-  <% end %>
+<div class="your-type">
+  <p>あなたのクロノタイプは・・・</p>
+  <%= image_tag chrono.image, size: '360x360', class: 'type-image' %>
+  <p class="animal-name">
+  <span><%= chrono.name %></span>です！
+  </p>
 </div>
+
+<div class="chrono-details">
+  <table>
+    <tr>
+      <th>必要な睡眠時間</th>
+      <td><%= chrono.sleep_hours %>時間</td>
+    </tr>
+
+    <tr>
+      <th>最適な就寝時間</th>
+      <td><%= chrono.bed_time %></td>
+    </tr>
+
+    <tr>
+      <th>起床時間</th>
+      <td><%= chrono.wake_up %></td>
+    </tr>
+
+    <tr>
+      <th>最も集中できる時間帯</th>
+      <td><%= chrono.peak_time %></td>
+    </tr>
+
+    <tr>
+      <th>運動に最適な時間帯</th>
+      <td><%= chrono.exercise %></td>
+    </tr>
+  </table>
+  <h1><%= chrono.name %>タイプの特徴</h1>
+  <p><%= chrono.content%></p>
+
+  <%= link_to "トップページへ戻る", root_path, class: "top-page-btn" %>
+</div>
+

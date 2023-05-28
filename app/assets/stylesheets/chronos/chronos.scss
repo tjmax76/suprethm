@@ -1,3 +1,7 @@
+// ***************
+// new
+// ***************
+
 .diagnosis-container {
   background-color: beige;
 }
@@ -20,7 +24,7 @@
   font-size: 3vh;
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 12 {
   .question#{$i} {
     text-align: center;
     height: 10vh;
@@ -45,4 +49,68 @@
   height: 40px;
   width: 15%;
   font-size: 22px;
+}
+
+// ****************
+// index
+// ****************
+
+.your-type {
+  text-align: center;
+  p {
+    font-size: 7vh;
+    margin-top: 6vh;
+  }
+  span {
+    color: red;
+  }
+}
+
+.type-image {
+  margin-top: 20vh;
+}
+
+.chrono-details{
+  table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    border: 1px solid black;
+    border-collapse: separate;
+    border-spacing: 40px;
+    border-radius: 10px;
+    background-color: beige;
+  }
+  p {
+    width: 60%;
+    margin-top: 30px;
+    
+    letter-spacing: 4px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 40px;
+  }
+  h1 {
+    border-bottom: 1px solid gray;
+    font-size: 6vh;
+    width: 70%;
+    padding-left: 10px;
+    margin-top: 100px;
+  }
+}
+
+.top-page-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 30%;
+  border-radius: 8px;
+  height: 6vh;
+  line-height: 6vh;
+  text-align: center;
+  background-color: royalblue;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
