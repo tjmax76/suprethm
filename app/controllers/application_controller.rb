@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :basic_auth
-  before_action :user_set
+  before_action :set_user
 
   private
 
@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys:[:nickname])
   end
 
-  def user_set
+  def set_user
     if user_signed_in?
       @user = User.find(current_user.id)
     end
