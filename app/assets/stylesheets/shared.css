@@ -28,6 +28,7 @@ header {
 .users {
   color: blue;
   margin-right: 8px;
+  width: 29%;
 }
 
 .head-menu-left {
@@ -37,4 +38,10 @@ header {
 
 .head-menu-right {
   color: blue;
+}
+
+header span {
+  color: black;
+  margin-right: 10%;
+  font-size: 12px;
 }
