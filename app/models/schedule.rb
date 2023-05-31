@@ -4,4 +4,6 @@ class Schedule < ApplicationRecord
     validates :started_at
     validates :finished_at
   end
+
+  belongs_to :user
 end

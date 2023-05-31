@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :chrono
-
+  has_many :schedules
 end
