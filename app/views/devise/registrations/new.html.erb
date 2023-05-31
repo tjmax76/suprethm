@@ -1,7 +1,7 @@
 <%= render partial: "shared/header", locals: {user: @user} %>
 <div class="sign-up-title">ユーザー登録</div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "sign-up-form") do |f| %>
+<%= form_for(resource, as: resource_name, url: "/#{params[:chrono_id]}/sign_up", class: "sign-up-form") do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -32,6 +32,6 @@
   </div>
 
   <div class="hidden">
-    <%= f.text_field :chrono, value: chrono.id %>
+    <%= f.text_field :chrono_id, value: "#{params[:chrono_id]}"%>
   </div>
 <% end %>

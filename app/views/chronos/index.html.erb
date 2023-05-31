@@ -39,5 +39,5 @@
   <p><%= chrono.content%></p>
 
   <%= link_to "トップページへ戻る", root_path, class: "top-page-btn" %>
-  <%= link_to "ユーザー登録", new_user_signup_path(chrono), class: "user-rgst-btn" %>
+  <%= link_to "ユーザー登録", "/#{chrono.id}/sign_up", class: "user-rgst-btn" %>
 </div>
