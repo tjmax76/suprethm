@@ -9,7 +9,7 @@
   <option value="holiday">休日</option>
 </select>
 
-<%= form_with url: "#", local: false, class: "schedule-form" do |f| %>
+<%= form_with  local: false, class: "schedule-form", id: "schedule-form" do |f| %>
 
   <div class="schedule-field">
     <%= f.label "イベント名" %><br>
@@ -32,5 +32,5 @@
 
 <% end %>
 
-<div class="schedule-list" id="shedule-list">
+<div class="schedule-list" id="schedule-list">
 </div>
