@@ -1,0 +1,36 @@
+<%= render partial: "shared/header", locals: {user: @user} %>
+<div class="new-schedule-heading">
+  <p>スケジュールの作成</p>
+</div>
+
+<select class="week">
+  <option value="blank">平日か休日を選択</option>
+  <option value="weekday">平日</option>
+  <option value="holiday">休日</option>
+</select>
+
+<%= form_with url: "#", local: false, class: "schedule-form" do |f| %>
+
+  <div class="schedule-field">
+    <%= f.label "イベント名" %><br>
+    <%= f.text_field "event_name" %><br>
+  </div>
+
+  <div class="schedule-field">
+    <%= f.label "開始時刻" %><br>
+    <%= f.time_field "started_at" %><br>
+  </div>
+
+  <div class="schedule-field">
+    <%= f.label "終了時刻" %><br >
+    <%= f.time_field "finished_at" %><br>
+  </div>
+
+  <div class="event-submit">
+    <%= f.submit "入力", id: "event-submit" %><br>
+  </div>
+
+<% end %>
+
+<div class="schedule-list" id="shedule-list">
+</div>
