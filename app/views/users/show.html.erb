@@ -4,8 +4,8 @@
 </div>
 
 <div class="your-animal">
-  <%= image_tag "/images/bear.png", size: '200x200', class: "chrono-img"%>
-  <p>あなたは<span class="animal">クマ</span>タイプです</p>
+  <%= image_tag @user.chrono.image, size: '200x200', class: "chrono-img"%>
+  <p>あなたは<span class="animal"><%= @user.chrono.name %></span>タイプです</p>
 
 
 <div class="contents-box">
