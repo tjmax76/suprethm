@@ -1,0 +1,156 @@
+<%= render partial: "shared/header", locals: {user: @user} %>
+<div class="diagnosis-container">
+  <div class="diagnosis-head">
+    <h1>2分でわかる！あなたのクロノタイプ</h1>
+    <p>これからあなたのクロノタイプを調べます。</p>
+    <p>なるべく深く考えず、直感で答えてください。</p>
+  </div>
+
+  <%= form_with url: chronos_path, local: true, class: "questions" do |f|%>
+    <div class="question1">
+      <p>Q1. 早起きは得意な方だ</p>
+      <%= f.radio_button :q1, :four %>
+      <%= f.label :q1, "当てはまる" %>
+      <%= f.radio_button :q1, :three %>
+      <%= f.label :q1, "やや当てはまる" %>
+      <%= f.radio_button :q1, :two %>
+      <%= f.label :q1, "やや当てはまらない" %>
+      <%= f.radio_button :q1, :one %>
+      <%= f.label :q1, "当てはまらない" %>
+    </div>
+
+    <div class="question2">
+      <p>Q2. 日付が変わる前に眠くなることが多い</p>
+      <%= f.radio_button :q2, :four %>
+      <%= f.label :q2, "当てはまる" %>
+      <%= f.radio_button :q2, :three %>
+      <%= f.label :q2, "やや当てはまる" %>
+      <%= f.radio_button :q2, :two %>
+      <%= f.label :q2, "やや当てはまらない" %>
+      <%= f.radio_button :q2, :one %>
+      <%= f.label :q2, "当てはまらない" %>
+    </div>
+
+    <div class="question3">
+      <p>Q3. リスクを取ることに躊躇しない方だ</p>
+      <%= f.radio_button :q3, :four %>
+      <%= f.label :q3, "当てはまる" %>
+      <%= f.radio_button :q3, :three %>
+      <%= f.label :q3, "やや当てはまる" %>
+      <%= f.radio_button :q3, :two %>
+      <%= f.label :q3, "やや当てはまらない" %>
+      <%= f.radio_button :q3, :one %>
+      <%= f.label :q3, "当てはまらない" %>
+    </div>
+
+    <div class="question4">
+      <p>Q4. 一番好きなのは？</p>
+      <%= f.radio_button :q4, :three %>
+      <%= f.label :q4, "朝食" %>
+      <%= f.radio_button :q4, :two %>
+      <%= f.label :q4, "昼食" %>
+      <%= f.radio_button :q4, :one %>
+      <%= f.label :q4, "夕食" %>
+    </div>
+
+    <div class="question5">
+      <p>Q5. 新しいことにチャレンジするのが好きだ</p>
+      <%= f.radio_button :q5, :four %>
+      <%= f.label :q5, "当てはまる" %>
+      <%= f.radio_button :q5, :three %>
+      <%= f.label :q1, "やや当てはまる" %>
+      <%= f.radio_button :q5, :two %>
+      <%= f.label :q5, "やや当てはまらない" %>
+      <%= f.radio_button :q5, :one %>
+      <%= f.label :q5, "当てはまらない" %>
+    </div>
+
+    <div class="question6">
+      <p>Q6. 他人との衝突を避けがちだ</p>
+      <%= f.radio_button :q6, :three %>
+      <%= f.label :q6, "当てはまる" %>
+      <%= f.radio_button :q6, :four %>
+      <%= f.label :q6, "やや当てはまる" %>
+      <%= f.radio_button :q6, :two %>
+      <%= f.label :q6, "やや当てはまらない" %>
+      <%= f.radio_button :q6, :one %>
+      <%= f.label :q6, "当てはまらない" %>
+    </div>
+
+    <div class="question7">
+      <p>Q7. 欲望に忠実な方である</p>
+      <%= f.radio_button :q7, :four %>
+      <%= f.label :q7, "当てはまる" %>
+      <%= f.radio_button :q7, :three %>
+      <%= f.label :q7, "やや当てはまる" %>
+      <%= f.radio_button :q7, :two %>
+      <%= f.label :q7, "やや当てはまらない" %>
+      <%= f.radio_button :q7, :one %>
+      <%= f.label :q7, "当てはまらない" %>
+    </div>
+
+    <div class="question8">
+      <p>Q8. 完璧主義だ</p>
+      <%= f.radio_button :q8, :one %>
+      <%= f.label :q8, "当てはまる" %>
+      <%= f.radio_button :q8, :two %>
+      <%= f.label :q8, "やや当てはまる" %>
+      <%= f.radio_button :q8, :three %>
+      <%= f.label :q8, "やや当てはまらない" %>
+      <%= f.radio_button :q8, :four %>
+      <%= f.label :q8, "当てはまらない" %>
+    </div>
+
+    <div class="question9">
+      <p>Q9. 仕事や勉強は朝が一番捗る</p>
+      <%= f.radio_button :q9, :four %>
+      <%= f.label :q9, "当てはまる" %>
+      <%= f.radio_button :q9, :three %>
+      <%= f.label :q9, "やや当てはまる" %>
+      <%= f.radio_button :q9, :one %>
+      <%= f.label :q9, "やや当てはまらない" %>
+      <%= f.radio_button :q9, :two %>
+      <%= f.label :q9, "当てはまらない" %>
+    </div>
+
+    <div class="question10">
+      <p>Q10. 内向的でインドア派だ</p>
+      <%= f.radio_button :q10, :one %>
+      <%= f.label :q10, "当てはまる" %>
+      <%= f.radio_button :q10, :two %>
+      <%= f.label :q10, "やや当てはまる" %>
+      <%= f.radio_button :q10, :three %>
+      <%= f.label :q10, "やや当てはまらない" %>
+      <%= f.radio_button :q10, :four %>
+      <%= f.label :q10, "当てはまらない" %>
+    </div>
+
+    <div class="question11">
+      <p>Q11. 不眠症で寝付けないことや目を覚ますことが多い</p>
+      <%= f.radio_button :q11, :one %>
+      <%= f.label :q11, "当てはまる" %>
+      <%= f.radio_button :q11, :two %>
+      <%= f.label :q11, "やや当てはまる" %>
+      <%= f.radio_button :q11, :three %>
+      <%= f.label :q11, "やや当てはまらない" %>
+      <%= f.radio_button :q11, :four %>
+      <%= f.label :q11, "当てはまらない" %>
+    </div>
+
+    <div class="question12">
+      <p>Q12. 心配症な性格だ</p>
+      <%= f.radio_button :q12, :one %>
+      <%= f.label :q12, "当てはまる" %>
+      <%= f.radio_button :q12, :three %>
+      <%= f.label :q12, "やや当てはまる" %>
+      <%= f.radio_button :q12, :two %>
+      <%= f.label :q12, "やや当てはまらない" %>
+      <%= f.radio_button :q12, :four %>
+      <%= f.label :q12, "当てはまらない" %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit "回答を送信", id: "submit" %>
+    </div>
+  <% end %>
+</div>
