@@ -47,11 +47,21 @@ const add = function() {
     xhr.onload = () => {
       const events = xhr.response.schedules;
       const list = document.getElementById('schedule-list');
+      list.innerHTML = "";
       html = buildHTML(events);
       html.forEach(element => {
         element += "<br>";
-        list.insertAdjacentHTML('afterbegin',element)
+        list.insertAdjacentHTML('afterbegin', element);
       });
+      const formValue1 = document.getElementById('event_name');
+      const formValue2 = document.getElementById('started_at');
+      const formValue3 = document.getElementById('finished_at');
+
+      formValue1.value = "";
+      formValue2.value = "";
+      formValue3.value = "";
+      const selectWeek = document.getElementById('select-week');
+      selectWeek.style.display = "none";
     };
   });
 };
