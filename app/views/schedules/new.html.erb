@@ -3,27 +3,27 @@
   <p>スケジュールの作成</p>
 </div>
 
-<select class="week">
-  <option value="blank">平日か休日を選択</option>
-  <option value="weekday">平日</option>
-  <option value="holiday">休日</option>
-</select>
 
 <%= form_with  local: false, class: "schedule-form", id: "schedule-form" do |f| %>
 
+  <div class="schedule-field" id="select-week">
+    <%= f.label "平日・休日" %><br>
+    <%= f.collection_select(:week_id, Week.all, :id, :name, {}) %><br>
+  </div>
+
   <div class="schedule-field">
     <%= f.label "イベント名" %><br>
-    <%= f.text_field "event_name" %><br>
+    <%= f.text_field "event_name", id: "event_name" %><br>
   </div>
 
   <div class="schedule-field">
     <%= f.label "開始時刻" %><br>
-    <%= f.time_field "started_at" %><br>
+    <%= f.time_field "started_at", id: "started_at" %><br>
   </div>
 
   <div class="schedule-field">
     <%= f.label "終了時刻" %><br >
-    <%= f.time_field "finished_at" %><br>
+    <%= f.time_field "finished_at", id: "finished_at" %><br>
   </div>
 
   <div class="event-submit">
