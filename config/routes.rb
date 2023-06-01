@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   root to: "homes#index"
   resources :users, only: :show do
-    resources :schedules, only: [:new, :create]
+    resources :schedules, only: [:new, :create, :index]
   end
   resources :chronos, only: [:index, :create, :new]
   
