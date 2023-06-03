@@ -13,16 +13,16 @@
     <h1>スケジュール</h1>
     <div class="schedule-contents">
       <div class="preview-schedule">
-        <%= link_to "#" do %>
+        <%= link_to user_schedules_path(@user) do %>
           <p>スケジュールを見る</p>
-          <%= image_tag "/images/pie_graph.png", size: '230x230'%>
+          <%= image_tag "/images/スケジュール帳.png", size: '230x195'%>
         <% end %>
       </div>
 
       <div class="new-schedule">
         <%= link_to new_user_schedule_path(@user) do %>
           <p>スケジュールを作る</p>
-          <%= image_tag "/images/スケジュール帳.png", size: '230x195'%>
+          <%= image_tag "/images/make_schedule.png", size: '230x220'%>
         <% end %>
       </div>
     </div>
