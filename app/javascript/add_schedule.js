@@ -1,4 +1,4 @@
-const buildHTML = (events) => {
+export const buildHTML = (events) => {
   const htmlContainer = [];
   events.forEach(event => {
     const regTarget1 = /2000-01-01T/;
@@ -49,7 +49,7 @@ const add = function() {
         const events = xhr.response.schedules;
         const list = document.getElementById('schedule-list');
         list.innerHTML = "";
-        html = buildHTML(events);
+        const html = buildHTML(events);
         html.forEach(element => {
           element += "<br>";
           list.insertAdjacentHTML('afterbegin', element);
