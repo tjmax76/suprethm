@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'schedules/new'
-  get 'schedules/create'
   devise_for :users
   devise_scope :user do
     get '/:chrono_id/sign_up', to: 'devise/registrations#new'
@@ -12,5 +10,4 @@ Rails.application.routes.draw do
     resources :schedules, only: [:new, :create, :index]
   end
   resources :chronos, only: [:index, :create, :new]
-  
 end
