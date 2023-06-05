@@ -1,4 +1,4 @@
-import { buildHTML } from "./add_schedule";
+import { buildHTML, deleteEvent } from "./add_schedule";
 const createTimeArea = (schedule) => {  
   const timeAreas = [];
   schedule.forEach(event => {
@@ -40,7 +40,7 @@ const createTimeArea = (schedule) => {
 };
 
 
-const createHTML = (response) => {
+export const createHTML = (response) => {
   const dayOfMinutes = 60 * 24;
   let minuteArray = [];
   for(let i = 0; i < dayOfMinutes; i++ ){
@@ -88,8 +88,8 @@ const onload = (xhr) => {
     });
     
     listContainer.insertAdjacentHTML('afterbegin', listHead);
-    
     blankContainer.insertAdjacentHTML('afterbegin', blankHTML);
+    deleteEvent();
   };
 };
 
