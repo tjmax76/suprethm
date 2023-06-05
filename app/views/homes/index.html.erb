@@ -52,9 +52,11 @@
 
 <div class="top-bottom">
   <p>さあ、あなたの快適な生活をスタートさせましょう！</p>
-    <div class="btn-container">
-      <%= link_to "診断して会員登録!", new_chrono_path, class: "sign-up btn", style: "color: white;" %>
-      <span>or</span>
-      <%= link_to "ログイン", new_user_session_path, class: "sign-in btn", style: "color: white;" %>
-    </div>
+    <% unless user_signed_in? %>
+      <div class="btn-container">
+        <%= link_to "診断して会員登録!", new_chrono_path, class: "sign-up btn", style: "color: white;" %>
+        <span>or</span>
+        <%= link_to "ログイン", new_user_session_path, class: "sign-in btn", style: "color: white;" %>
+      </div>
+    <% end %>
 </div>
