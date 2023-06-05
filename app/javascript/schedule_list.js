@@ -61,13 +61,13 @@ export const createHTML = (response) => {
 
   const listHead = `
     <div class="your-schedule">
-      <p>${user.nickname}さんの${week.attributes.name}スケジュール</p>
+      <p>${user.nickname}さんの<span>${week.attributes.name}</span>スケジュール</p>
     </div><br>
     `;
   const html = buildHTML(schedules);
   const blankHTML = `
     <div class="blank-time">
-      <p>一日${outOfEvents.length}分の空き時間があります！ぜひ有効活用しましょう！</p>
+      <p>一日<span>${outOfEvents.length}</span>分の空き時間があります！有意義にお使いください！</p>
     </div><br>`;
   return {html, listHead, blankHTML}
 };
@@ -76,8 +76,6 @@ const onload = (xhr) => {
   xhr.onload = () => {
     const listContainer = document.getElementById('list-container');
     const blankContainer = document.getElementById('blank-container');
-    listContainer.style.display = "block";
-    blankContainer.style.display = "block";
     listContainer.innerHTML = "";
     blankContainer.innerHTML = "";
     const response = xhr.response

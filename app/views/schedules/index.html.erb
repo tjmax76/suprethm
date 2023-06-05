@@ -1,11 +1,16 @@
 <%= render partial: "shared/header", locals: {user: @user} %>
-
 <div class="schedule-container">
-  <%= link_to "平日", user_schedules_path(@user), id: "weekday-btn" %>
-  <%= link_to "休日", user_schedules_path(@user), id: "holiday-btn" %>
-</div>
+  <div class="preview-schedule-header">
+    <p>スケジュール閲覧</p>
+  </div>
 
-<div class="list-container" style="display: none" id="list-container">
-</div>
-<div class="blank-container" style="display: none" id="blank-container">
+  <div class="schedule-selector">
+    <%= link_to "平日", user_schedules_path(@user), id: "weekday-btn" %>
+    <%= link_to "休日", user_schedules_path(@user), id: "holiday-btn" %>
+  </div>
+
+  <div class="list-container" id="list-container">
+  </div>
+  <div class="blank-container" id="blank-container">
+  </div>
 </div>

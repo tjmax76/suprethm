@@ -1,36 +1,38 @@
 <%= render partial: "shared/header", locals: {user: @user} %>
-<div class="new-schedule-heading">
-  <p>スケジュールの作成</p>
-</div>
-
-
-<%= form_with  model: [@user, @schedule], local: false, class: "schedule-form", id: "schedule-form" do |f| %>
-
-  <div class="schedule-field" id="select-week">
-    <%= f.label "平日・休日" %><br>
-    <%= f.collection_select(:week_id, Week.all, :id, :name, {}) %><br>
+<div class="schedule-container">
+  <div class="new-schedule-heading">
+    <p>スケジュールの作成</p>
   </div>
 
-  <div class="schedule-field">
-    <%= f.label "イベント名" %><br>
-    <%= f.text_field "event_name", id: "event_name" %><br>
+
+  <%= form_with  model: [@user, @schedule], local: false, class: "schedule-form", id: "schedule-form" do |f| %>
+
+    <div class="schedule-field" id="select-week">
+      <%= f.label "平日・休日" %><br>
+      <%= f.collection_select(:week_id, Week.all, :id, :name, {}) %><br>
+    </div>
+
+    <div class="schedule-field">
+      <%= f.label "イベント名" %><br>
+      <%= f.text_field "event_name", id: "event_name" %><br>
+    </div>
+
+    <div class="schedule-field">
+      <%= f.label "開始時刻" %><br>
+      <%= f.time_field "started_at", id: "started_at" %><br>
+    </div>
+
+    <div class="schedule-field">
+      <%= f.label "終了時刻" %><br >
+      <%= f.time_field "finished_at", id: "finished_at" %><br>
+    </div>
+
+    <div class="event-submit">
+      <%= f.submit "入力", id: "event-submit" %><br>
+    </div>
+
+  <% end %>
+
+  <div class="schedule-list" id="schedule-list">
   </div>
-
-  <div class="schedule-field">
-    <%= f.label "開始時刻" %><br>
-    <%= f.time_field "started_at", id: "started_at" %><br>
-  </div>
-
-  <div class="schedule-field">
-    <%= f.label "終了時刻" %><br >
-    <%= f.time_field "finished_at", id: "finished_at" %><br>
-  </div>
-
-  <div class="event-submit">
-    <%= f.submit "入力", id: "event-submit" %><br>
-  </div>
-
-<% end %>
-
-<div class="schedule-list" id="schedule-list">
 </div>

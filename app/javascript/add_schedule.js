@@ -17,10 +17,10 @@ export const buildHTML = (events) => {
       <div class="event-wrapper">
         <div class="time-data">
           <div class="start-time">
-            ${start}<span>〜</span>
+            <p>${start}<span>〜</span></p>
           </div>
           <div class="finish-time">
-            ${finish}
+            <p>${finish}</p>
           </div>
         </div>
         <div class="event-label">
