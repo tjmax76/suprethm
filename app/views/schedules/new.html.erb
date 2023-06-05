@@ -4,7 +4,7 @@
 </div>
 
 
-<%= form_with  local: false, class: "schedule-form", id: "schedule-form" do |f| %>
+<%= form_with  model: [@user, @schedule], local: false, class: "schedule-form", id: "schedule-form" do |f| %>
 
   <div class="schedule-field" id="select-week">
     <%= f.label "平日・休日" %><br>
