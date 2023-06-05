@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :users, only: :show do
     resources :schedules, only: [:new, :create, :index, :destroy]
   end
-  resources :chronos, only: [:index, :create, :new]
+  resources :chronos, only: [:index, :create, :new, :show]
 end
