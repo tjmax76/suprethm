@@ -1,0 +1,114 @@
+.schedule-container {
+  background-color: beige;
+  height: 100%;
+
+  .your-schedule {
+    text-align: center;
+    padding-bottom: 2%;
+    font-size: 23px;
+    span {
+      color: blue;
+    }
+  }
+
+  .preview-schedule-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 6vh;
+    padding-top: 3%;
+  }
+
+  .schedule-selector {
+    text-align: center;
+    padding: 2%;
+    a {
+      padding: 5px 8px;
+      display: inline;
+      border-radius: 5px;
+    }
+    #weekday-btn {
+      background-color: deepskyblue;
+      color: white;
+    }
+    #holiday-btn {
+      background-color: seagreen;
+      color: white;
+      margin-left: 5px;
+    }
+  }
+
+  .new-schedule-heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 6vh;
+    padding-top: 3%;
+  }
+
+  .schedule-form {
+    text-align: center;
+
+    select {
+      padding: 6px 30px;
+      font-size: 15px;
+
+    }
+    label {
+      padding-top: 2%;
+      display: block;
+    }
+    input {
+      padding: 6px 30px;
+      font-size: 18px;
+    }
+    .event-submit {
+      padding-top: 3%;
+      input{
+        padding: 5px 9px;
+      }
+    }
+  }
+}
+
+.schedule-list {
+  padding-top: 5%;
+  padding-bottom: 4%;
+}
+
+.event-wrapper {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  .event-label {
+    font-size: 25px;
+    margin-right: 2%;
+  }
+  .time-data {
+    display: flex;
+    font-size: 20px;
+    margin-right: 3%;
+  }
+  .event-delete-btn {
+    width: 6%;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+  }
+}
+
+.blank-container {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 4%;
+  span {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}

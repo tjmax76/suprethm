@@ -4,25 +4,26 @@
 </div>
 
 <div class="your-animal">
-  <%= image_tag "/images/bear.png", size: '200x200', class: "chrono-img"%>
-  <p>あなたは<span class="animal">クマ</span>タイプです</p>
-
+  <%= link_to chrono_path(@user.chrono_id) do %>
+    <%= image_tag @user.chrono.image, size: '200x200', class: "chrono-img"%>
+    <p>あなたは<span class="animal"><%= @user.chrono.name %></span>タイプです</p>
+  <% end %>
 
 <div class="contents-box">
   <div class="schedules">
     <h1>スケジュール</h1>
     <div class="schedule-contents">
       <div class="preview-schedule">
-        <%= link_to "#" do %>
+        <%= link_to user_schedules_path(@user) do %>
           <p>スケジュールを見る</p>
-          <%= image_tag "/images/pie_graph.png", size: '230x230'%>
+          <%= image_tag "/images/スケジュール帳.png", size: '230x195'%>
         <% end %>
       </div>
 
-      <div class="edit-schedule">
-        <%= link_to "#" do %>
+      <div class="new-schedule">
+        <%= link_to new_user_schedule_path(@user) do %>
           <p>スケジュールを作る</p>
-          <%= image_tag "/images/スケジュール帳.png", size: '230x195'%>
+          <%= image_tag "/images/make_schedule.png", size: '230x220'%>
         <% end %>
       </div>
     </div>
