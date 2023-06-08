@@ -12,7 +12,7 @@ class DiariesController < ApplicationController
     diary = Diary.create(diary_params)
   @user = User.find(current_user.id)
     if diary.save
-      redirect_to user_path(@user)
+      redirect_to user_schedules_path(@user)
     else
       render :new
     end

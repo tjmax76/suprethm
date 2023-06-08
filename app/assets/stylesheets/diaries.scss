@@ -14,8 +14,16 @@
 
 .diaries-header {
   padding-left: 3%;
-  font-size: 30px;
-  padding-top: 2%;
+  h1 {
+    font-size: 30px;
+    padding-top: 2%;
+  }
+
+  p {
+    color: red;
+    padding-top: 1%;
+    font-size: 15px;
+  }
 }
 
 .diary-substance {
@@ -56,3 +64,22 @@ index
   margin-right: auto;
   border-radius: 12px; 
 }
+
+/*********************************************
+new
+*********************************************/
+
+.diary-field {
+  padding: 2% 0 0 2%;
+}
+
+.diary-submit {
+  padding: 3% 0 0 2%;
+  .diary-submit-btn {
+    width: 8%;
+    background-color: royalblue;
+    border-radius: 5px;
+    color: white;
+  }
+}
+
