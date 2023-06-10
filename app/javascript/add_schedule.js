@@ -4,15 +4,18 @@ export const buildHTML = (events) => {
   events.forEach(event => {
     const regTarget1 = /2000-01-01T/;
     const regTarget2 = /:00.000\+09:00/;
+    const regTarget3 = /2000-01-02T/;
 
     let start = event.started_at;
     start = start.replace(regTarget1, "");
     start = start.replace(regTarget2, "");
+    start = start.replace(regTarget3, "");
 
     let finish = event.finished_at;
     finish = finish.replace(regTarget1, "");
     finish = finish.replace(regTarget2, "");
-    
+    finish = finish.replace(regTarget3, "");
+
     const html = `
       <div class="event-wrapper">
         <div class="time-data">
