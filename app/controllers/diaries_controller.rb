@@ -9,9 +9,9 @@ class DiariesController < ApplicationController
   end
 
   def create
-    diary = Diary.create(diary_params)
-  @user = User.find(current_user.id)
-    if diary.save
+    @diary = Diary.create(diary_params)
+    @user = User.find(current_user.id)
+    if @diary.save
       redirect_to user_schedules_path(@user)
     else
       render :new
