@@ -5,7 +5,7 @@
 
 <div class="your-animal">
   <%= link_to chrono_path(@user.chrono_id) do %>
-    <%= image_tag @user.chrono.image, size: '200x200', class: "chrono-img", alt: "#{@user.chrono.name}の画像"%>
+    <%= image_tag (@user.chrono.image.variant(resize: '200x200')), class: "chrono-img", alt: "#{@user.chrono.name}の画像"%>
     <p>あなたは<span class="animal"><%= @user.chrono.name %></span>タイプです</p>
   <% end %>
 
