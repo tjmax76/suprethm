@@ -82,3 +82,25 @@ new
     color: white;
   }
 }
+
+/******************************************
+show
+******************************************/
+
+.diary-btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+  a {
+    width: 15%;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    background-color: gainsboro;
+  }
+}
