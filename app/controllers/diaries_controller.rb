@@ -1,6 +1,6 @@
 class DiariesController < ApplicationController
   def index
-    @diaries = Diary.where(user_id: current_user.id)
+    @diaries = Diary.where(user_id: current_user.id).order(date: "DESC")
   end
 
   def new
@@ -10,9 +10,10 @@ class DiariesController < ApplicationController
 
   def create
     @diary = Diary.create(diary_params)
+    @diary.date = Date.today
     @user = User.find(current_user.id)
     if @diary.save
-      redirect_to user_schedules_path(@user)
+      redirect_to user_diaries_path(@user)
     else
       render :new
     end
@@ -22,9 +23,29 @@ class DiariesController < ApplicationController
     @diary = Diary.find(params[:id])
   end
 
+  def edit
+    @diary = Diary.find(params[:id])
+    @user = User.find(params[:user_id])
+  end
+
+  def update 
+    @diary = Diary.find(params[:id])
+    if @diary.update(diary_params)
+      redirect_to user_diaries_path(@user)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    diary = Diary.find(params[:id])
+    diary.destroy
+    redirect_to user_diaries_path(@user)
+  end
+
   private
   def diary_params
-    params.require(:diary).permit(:disliked, :liked, :target, :date).merge(user_id: current_user.id)
+    params.require(:diary).permit(:disliked, :liked, :target).merge(user_id: current_user.id)
   end
 
 end

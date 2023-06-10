@@ -1,9 +1,13 @@
 <%= render partial: "shared/header", locals: {user: @user} %>
 <div class="diary-wrapper">
-  <div class="diary-container">
-
+  <div class="diaries-container">
     <div class="diaries-header">
       <h1><%= @diary.date %>の日記</h1>
+    </div>
+
+    <div class="diary-btns">
+      <%= link_to "編集", edit_user_diary_path(user_id: @user.id, id: @diary.id) %>
+      <%= link_to "削除", user_diary_path(user_id: @user.id, id: @diary.id), method: "DELETE" %>
     </div>
 
     <div class="diary-substance">
