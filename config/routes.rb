@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   root to: "homes#index"
   resources :users, only: :show do
+    resources :diaries, only: [:index, :new, :create, :show]
     resources :schedules, only: [:new, :create, :index, :destroy]
   end
   resources :chronos, only: [:index, :create, :new, :show]

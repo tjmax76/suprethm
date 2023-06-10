@@ -1,0 +1,23 @@
+<%= render partial: "shared/header", locals: {user: @user} %>
+<div class="diary-wrapper">
+  <div class="diaries-container">
+    <div class="diaries-header">
+      <h1>日記一覧</h1>
+    </div>
+
+    <div class="diaries-date">
+      <% if @diaries.length > 0%>
+        <% @diaries.each do |diary| %>
+          <div class="diary-box">
+          <%= link_to user_diary_path(user_id: @user.id, id: diary.id) do %>
+            <p><%= diary.date %></p>
+          </div>
+          <% end %>
+        <% end %>
+      <% else %>
+        <p>まだ日記がありません…</p>
+      <% end %>
+    </div>
+  </div>
+    <%= link_to "マイページへ戻る", user_path(@user), class: "my-page-btn"%>
+</div>

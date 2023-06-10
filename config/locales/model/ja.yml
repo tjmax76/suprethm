@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    attributes:
+      diary:
+        liked: 今日一番つらかった・嫌だったこと
+        disliked: 今日一番嬉しかった・よかったこと
+        target: 明日の目標

@@ -1,0 +1,84 @@
+.diary-wrapper {
+  background-color: mediumaquamarine;
+  height: 100%;
+  padding-top: 5%;
+  .diary-container {
+    background-color: beige;
+    width: 80%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+  }
+}
+
+.diaries-header {
+  padding-left: 3%;
+  h1 {
+    font-size: 30px;
+    padding-top: 2%;
+  }
+
+  p {
+    color: red;
+    padding-top: 1%;
+    font-size: 15px;
+  }
+}
+
+.diary-substance {
+  height: 100%;
+  .disliked {
+    margin-top: 3%;
+  }
+  h1 {
+    font-size: 25px;
+    margin-bottom: 2%;
+  }
+  p {
+    font-size: 18px;
+  }
+  div {
+  height: 27%;
+  margin-left: 2%;
+  }
+}
+
+/*********************************************
+index
+*********************************************/
+
+.diaries-date {
+  padding-left: 3%;
+  p {
+    margin-top: 3%;
+    font-size: 20px;
+  }
+}
+
+.diaries-container {
+  background-color: beige;
+  width: 80%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px; 
+}
+
+/*********************************************
+new
+*********************************************/
+
+.diary-field {
+  padding: 2% 0 0 2%;
+}
+
+.diary-submit {
+  padding: 3% 0 0 2%;
+  .diary-submit-btn {
+    width: 8%;
+    background-color: royalblue;
+    border-radius: 5px;
+    color: white;
+  }
+}

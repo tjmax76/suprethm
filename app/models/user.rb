@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   belongs_to :chrono
   has_many :schedules
+  has_many :diaries
 end

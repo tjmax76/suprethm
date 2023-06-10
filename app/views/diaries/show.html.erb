@@ -1,0 +1,26 @@
+<%= render partial: "shared/header", locals: {user: @user} %>
+<div class="diary-wrapper">
+  <div class="diary-container">
+
+    <div class="diaries-header">
+      <h1><%= @diary.date %>の日記</h1>
+    </div>
+
+    <div class="diary-substance">
+      <div class="disliked">
+        <h1>今日一番つらかった・嫌だったこと</h1>
+        <p><%= @diary.disliked %></p>
+      </div>
+      <div class="liked">
+        <h1>今日一番嬉しかった・よかったこと</h1>
+        <p><%= @diary.liked %></p>
+      </div>
+      <div class="target">
+        <h1>明日の目標</h1>
+        <p><%= @diary.target%></p>
+      </div>
+    </div>
+
+  </div>
+  <%= link_to "マイページへ戻る", user_path(@user), class: "my-page-btn"%>
+</div>
