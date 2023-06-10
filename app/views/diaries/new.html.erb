@@ -1,12 +1,13 @@
 <%= render partial: "shared/header", locals: {user: @user} %>
 <div class="diary-wrapper">
-  <div class="diary-container">
+  <div class="diaries-container">
     <div class="diaries-header">
       <h1>日記を書く</h1>
       <p>※日記は上の項目から順に書くのがより効果的です!</p>
     </div>
 
     <%= form_with model: [@user, @diary], local: true do |f| %>
+      <%= render "shared/errors", model: f.object %>
       <div class="diary-field">
         <%= f.label "今日一番つらかった・嫌だったこと" %><br>
         <%= f.text_area :disliked %>
