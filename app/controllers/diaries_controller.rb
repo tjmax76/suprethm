@@ -13,7 +13,7 @@ class DiariesController < ApplicationController
     @diary.date = Date.today
     @user = User.find(current_user.id)
     if @diary.save
-      redirect_to user_diaries_path(@user)
+      redirect_to user_diary_path(user_id: @user.id, id: @diary.id)
     else
       render :new
     end
@@ -31,7 +31,7 @@ class DiariesController < ApplicationController
   def update 
     @diary = Diary.find(params[:id])
     if @diary.update(diary_params)
-      redirect_to user_diaries_path(@user)
+      redirect_to user_diary_path(user_id: @user.id, id: @diary.id)
     else
       render :edit
     end
